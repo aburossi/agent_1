@@ -25,7 +25,7 @@ Ensure the JSON is valid and contains no additional text.
 """
 
 # Create the LLMChain for the "What is it?" slide
-title_chain = PromptTemplate(
+what_is_it_chain = PromptTemplate(
     template=what_is_it_prompt_template,
     input_variables=["source_text"]
 ) | llm
