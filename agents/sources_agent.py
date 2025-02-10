@@ -26,10 +26,8 @@ Ensure the JSON is valid and contains no additional text.
 """
 
 # Create the LLMChain for the sources slide
-sources_chain = LLMChain(
-    llm=llm,
-    prompt=PromptTemplate(
-        template=sources_prompt_template,
-        input_variables=["source_text"]
-    )
-)
+title_chain = PromptTemplate(
+    template=sources_prompt_template,
+    input_variables=["source_text"]
+) | llm
+
