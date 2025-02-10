@@ -1,10 +1,7 @@
-# main.py
-from dotenv import load_dotenv
-load_dotenv()  # Load .env file before other imports
-
 import json
-from orchestrator import orchestrate_slide_deck
+from dotenv import load_dotenv
 import os
+from orchestrator import orchestrate_slide_deck
 
 def main():
     # Example source text for testing
@@ -15,4 +12,4 @@ def main():
     print(json.dumps(slide_deck, indent=2))
 
 if __name__ == '__main__':
-        main()
+    main()

@@ -1,4 +1,3 @@
-# utils.py
 import json
 
 def parse_output(output):
