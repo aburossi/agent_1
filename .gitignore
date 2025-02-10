@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables (avoid exposing your API keys)
+.env
+*.env
+
+# Virtual environment directories
+venv/
+env/
+ENV/
+
+# Distribution / packaging directories
+build/
+dist/
+.eggs/
+*.egg-info/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
