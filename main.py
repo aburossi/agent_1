@@ -1,6 +1,6 @@
+# main.py
+import env_setup  # Load environment variables
 import json
-from dotenv import load_dotenv
-import os
 from orchestrator import orchestrate_slide_deck
 
 def main():

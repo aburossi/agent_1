@@ -1,12 +1,12 @@
-# framework.py
 import json
 import os
-import env_setup  # Ensure environment variables are loaded
+from dotenv import load_dotenv
 
-# Retrieve API key from environment
+# Load environment variables from .env file
+load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 if not OPENAI_API_KEY:
-    raise ValueError("OPENAI_API_KEY not found in environment.")
+    raise ValueError("OPENAI_API_KEY not found in .env file")
 
 # Updated imports per deprecation warnings:
 from langchain.chains import LLMChain
@@ -126,6 +126,7 @@ def orchestrate_slide_deck(source_text: str) -> dict:
     return deck
 
 # --- Testing the Pipeline ---
+
 if __name__ == "__main__":
     # Example source text for testing
     source_text = "This is a sample source text used to generate a simple slide deck using LangChain."

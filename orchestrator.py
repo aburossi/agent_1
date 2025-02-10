@@ -1,3 +1,5 @@
+# orchestrator.py
+import env_setup  # Ensure environment variables are loaded
 from agents.title_agent import title_chain
 from agents.sources_agent import sources_chain
 from agents.what_is_it_agent import what_is_it_chain
