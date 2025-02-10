@@ -1,10 +1,11 @@
 import json
 from dotenv import load_dotenv
 import os
-from orchestrator import orchestrate_slide_deck
 
-# Explicitly load .env file
+# Load .env immediately so that all subsequent imports have access to the environment variables.
 load_dotenv()
+
+from orchestrator import orchestrate_slide_deck
 
 def main():
     source_text = "This is a sample source text used to generate a simple slide deck using LangChain."
